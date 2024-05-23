@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo-con {
+    background-color: rgb(18, 145, 203);
+    overflow: hidden;
+    max-height: 90px;
+}
+
+.logo-con a,p{
+    justify-content: center;
+    float: left;
+    color:black;
+    text-align: center;
+    padding-right: 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.logo-con p{
+    margin: 10px 0px;
+    margin-right: 50px;
+    font-weight: bold;
+    font-size: 60px;
+    color:rgb(252, 253, 253);
+    
+}
+
+.link a{
+    background-color: rgb(204, 201, 201);
+    margin: 0px;
+    padding: 28px 20px;
+    float: right;
+}
+
+.logo-container img {
+  margin: 10px;
+  padding: 0px;
+  max-height: 60px;
+  max-width: 100%;
+  margin-right: 10px; 
+}
+
+.link a:hover{
+  background-color: rgb(5, 216, 248);
+  color: white;
+}
+
+.login a{
+  background-color:rgb(0, 149, 255);
+  
+}
+
+.user_info img{
+  max-height: 30px;
+  position: relative;
+  top: 5px;
+}
+
+.user_info a{
+  font-size: 33px;
+  background-color:rgb(0, 149, 255);
+  color: white;
+}
+
+.product{
+  position: fixed;
+  bottom: 0;
+  right: 1px;
+  display: flex;
+}
+
+.product a{
+  text-decoration: none;
+  padding: 10px;
+  background-color:rgb(0, 149, 255);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 1px;
+}
+
+.product a:hover{
+  background-color: rgb(5, 244, 248);
+  color: black;
+}
+

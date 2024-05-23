@@ -1,0 +1,38 @@
+.delete-btn, .edit-btn {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.my-item-link {
+    display: inline-block;
+    margin: 20px 0;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.my-item-link:hover {
+    color: #004080;
+    text-decoration: underline;
+}
