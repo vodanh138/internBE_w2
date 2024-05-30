@@ -37,6 +37,7 @@ input[type = "text"]{
     text-decoration: none;
     display: flex;
     color: black;
+    border: 1px solid #f1f1f1;
 }
 
 .search-suggestion-item:hover {

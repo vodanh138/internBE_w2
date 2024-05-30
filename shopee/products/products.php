@@ -57,6 +57,7 @@
                 echo "<p>No result found</p>";
             }
         }
+        include_once ("footer.php");
         ?> -->
     </main>
 

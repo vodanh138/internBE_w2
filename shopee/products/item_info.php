@@ -38,7 +38,8 @@
                 window.location.href = "../index.php";
             </script>';
 
-
+        $view_inc = "UPDATE product_table SET view = view + 1 WHERE pid = '$pid'";
+        mysqli_query($con, $view_inc);
         echo '<div class="product_display">
                         <img src="' . $row['image'] . '"> <br>' .
             "<p>Product's name:</p>" .

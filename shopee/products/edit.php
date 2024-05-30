@@ -27,7 +27,7 @@
                 WHERE pid = '$pid'";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($result);
-    if (!($row['uid'] == $uid)) {
+    if (!($row['uid'] == $_SESSION["uid"])) {
         echo '<script>
                             alert("You need to log in to access this page.");
                             window.location.href = "../index.php?page=login";
@@ -51,6 +51,9 @@
         <input type="text" name="edit_name" class="edit_name" id="edit_name" value=<?php echo '"' . $row['pname'] . '"' ?>><br>
         <button type="submit" name="btn_edit" class="btn_edit"> Edit</button>
     </form>
+    <?php
+    include_once ("footer.php");
+    ?>
 </body>
 
 </html>
