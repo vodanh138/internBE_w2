@@ -19,6 +19,7 @@ CREATE TABLE shopee.product_table (
     City VARCHAR(255), 
     District VARCHAR(255),
     uid INT,
+    view Int DEFAULT '0',
     PRIMARY KEY (pid),
     FOREIGN KEY (uid) REFERENCES user_table(uid)
 );

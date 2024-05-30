@@ -93,17 +93,18 @@ if (isset($_POST["add_name"]) && isset($_POST["add_price"]) && isset($_POST["Sta
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style1/add_product.css" />
     <title>Add Item</title>
 </head>
 
 <body>
     <form method="post" id="add_form" enctype="multipart/form-data">
-        <label class="p_name">Product's Name:</label>
+        <label class="p_name" style = "font-weight:bold">Product's Name:</label>
         <input type="text" name="add_name" class="add_name" id="add_name"><br>
-        <label class="p_name">Product's Price:</label>
+        <label class="p_name" style = "font-weight:bold">Product's Price:</label>
         <input type="number" name="add_price" class="add_price" id="add_price">(VND)<br>
 
-        <label for="State">State:</label>
+        <label for="State" style = "font-weight:bold">State:</label><br>
         <select id="State" name="State">
             <option value="">Select State</option>
             <option value="Hà Nội">Hà Nội</option>
@@ -112,23 +113,28 @@ if (isset($_POST["add_name"]) && isset($_POST["add_price"]) && isset($_POST["Sta
             <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
         </select>
 
-        <label for="City">City:</label>
+        <br><label for="City" style = "font-weight:bold">City:</label><br>
         <select id="City" name="City">
             <option value="">Select City</option>
         </select>
 
-        <label for="District">District:</label>
+        <br><label for="District" style = "font-weight:bold">District:</label><br>
         <select id="District" name="District">
             <option value="">Select District</option>
         </select>
-        <br>
-        <input type="file" name="image" accept="image/*" id="add_file"><br>
-        <button type="submit" name="btn_add" class="btn_add"> Add</button>
+        <br><br>
+        <label for = "add_file" id = "add_label" class = "add_label">Choose File</label>
+        <br><p id = "file_name"></p><br><br><br><br>
+        <input type="file" name="image" accept="image/*" id="add_file" class = "add_file">
+        <button type="submit" name="btn_add" class="btn_add"> Add</button><br>
+        <div id="miss_info" class="miss_info" style="color:red;"></div>
     </form>
-    <div id="miss_info" class="miss_info" style="color:red;"></div>
+    
+    
     <?php
     if (isset($error))
         echo $error;
+    include_once ("footer.php");
     ?>
 
     <script src="../js/add_products.js"></script>

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<div class="logo-con">
+    <div class="logo-con">
         <a href="../index.php?page=home">
             <div class="logo-container">
                 <img src="../asset/hcmut.png">
@@ -17,18 +17,34 @@
         </a>
         <div class="link">
             <p>
-                Welcome to MyBK
+                Welcome to MSP
             </p>
             <?php
             session_start();
             if (isset($_SESSION['ori_username'])) {
+
                 $username = $_SESSION['ori_username'];
-                echo '<div class="user_info">
-                            <a href="../index.php?page=logout">
+                echo '<div class = "user_info">
+                            <a href = "../index.php?page=logout">
                                 <img src="../asset/user.png">';
                 echo "$username";
                 echo '</a>
                         </div>';
+                echo '' .
+                    // <div class = "sproduct">
+                    //     <a href="./products/products.php">Search Product Lazy</a>
+                    // </div>
+                    '<div class = "mproduct">
+                        <a href="my_product.php">My Item</a>
+                    </div>
+    
+                    <div class = "aproduct">
+                        <a href="add_product.php">Add Item</a>
+                    </div>
+    
+                    <div class = "sproduct">
+                        <a href="paging_products.php">Search Item</a>
+                    </div>';
             } else {
                 echo '  <div class="login">
                             <a href="../index.php?page=login">Login</a>
@@ -36,28 +52,11 @@
                         <a href="../index.php?page=register">Register</a>
                         <a href="paging_products.php">Products</a>';
             }
+
             ?>
-            <a href="../index.php?page=home">Home</a>
+
+            <a href="home.php">Home</a>
         </div>
     </div>
-    <?php
-    if (isset($_SESSION["ori_username"])) {
-        echo '<div class="product">'.
-                // <div class = "sproduct">
-                //     <a href="products.php">Search Product Lazy</a>
-                // </div>
-                '<div class = "sproduct">
-                    <a href="paging_products.php">Search Item</a>
-                </div>
-                <div class = "aproduct">
-                    <a href="add_product.php">Add Item</a>
-                </div>
-                <div class = "mproduct">
-                    <a href="my_product.php">My Item</a>
-                </div>
-            </div>';
-    }
-    ?>
 </body>
-
 </html>

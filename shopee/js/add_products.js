@@ -88,4 +88,8 @@ document.getElementById("add_form").addEventListener("submit", function (event) 
       this.submit();
     }
   });
-
+document.getElementById('add_file').addEventListener('change', function() {
+    var fileInput = document.getElementById('add_file');
+    var fileName = document.getElementById('file_name');
+    fileName.textContent = fileInput.files[0].name + "  has been chosen";
+});
