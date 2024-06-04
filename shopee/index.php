@@ -20,7 +20,7 @@
             ?>
 
             <?php
-            $page = isset($_GET['page']) ? $_GET['page'] : 'login';
+            $page = isset($_GET['page']) ? $_GET['page'] : header("Location: products/home.php");;
             $page_path = './user/' . $page . '.php';
             if (file_exists($page_path)) {
                 include $page_path;
